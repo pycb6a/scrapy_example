@@ -1,0 +1,6 @@
+syntax: glob
+.cache
+.idea
+*.pyc
+products.json
+links,.json
