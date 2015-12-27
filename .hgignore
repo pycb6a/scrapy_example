@@ -3,4 +3,4 @@ syntax: glob
 .idea
 *.pyc
 products.json
-links,.json
+links.json
