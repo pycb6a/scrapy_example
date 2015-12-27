@@ -37,6 +37,6 @@ class CrawlerSpider(CrawlSpider):
         if 'product' in response.url:
             item['url'] = response.url
             item['status_code'] = response.status
-            item['title'] = response.xpath('//title/text()').extract()
+            item['title'] = response.xpath('//title/text()').extract()[0]
             item['content_type'] = response.headers['Content-Type']
         return item
