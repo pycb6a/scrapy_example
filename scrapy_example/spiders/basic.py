@@ -12,6 +12,7 @@ class BasicSpider(scrapy.Spider):
     name = 'basic'
     allowed_domains = ['demo.thelia.net']
     start_urls = ('http://demo.thelia.net/?view=product&locale=en_US&product_id=1',)
+    custom_settings = {'FEED_URI': 'products.json'}
 
     def __init__(self):
         super(BasicSpider, self).__init__()

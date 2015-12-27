@@ -13,11 +13,11 @@ class CrawlerSpider(CrawlSpider):
     name = 'crawler'
     allowed_domains = ['demo.thelia.net']
     start_urls = ['http://demo.thelia.net/?view=category&locale=en_US&category_id=1']
+    custom_settings = {'FEED_URI': 'links.json'}
 
     rules = (
         Rule(LinkExtractor(allow=r'view=category|product',
-                           restrict_xpaths=('//ul[contains(@class, "pagination")]', '//div[@class="product-btn"]')
-                           ),
+                           restrict_xpaths=('//ul[contains(@class, "pagination")]', '//div[@class="product-btn"]')),
              callback='parse_item',
              follow=True),
     )

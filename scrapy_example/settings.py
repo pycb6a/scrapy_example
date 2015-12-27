@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
 
+
 BOT_NAME = 'scrapy_example'
 
 SPIDER_MODULES = ['scrapy_example.spiders']
@@ -17,6 +18,7 @@ ITEM_PIPELINES = {
 
 CONCURRENT_REQUESTS = 3
 DOWNLOAD_DELAY = 3
+FEED_FORMAT = 'json'
 
 MONGO_URI = 'localhost'
 MONGO_DATABASE = 'items'
