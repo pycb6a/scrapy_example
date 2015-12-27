@@ -2,5 +2,5 @@ syntax: glob
 .cache
 .idea
 *.pyc
-products.json
+products.csv
 links.json

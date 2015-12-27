@@ -12,11 +12,15 @@ class BasicSpider(scrapy.Spider):
     name = 'basic'
     allowed_domains = ['demo.thelia.net']
     start_urls = ('http://demo.thelia.net/?view=product&locale=en_US&product_id=1',)
-    custom_settings = {'FEED_URI': 'products.json'}
+    custom_settings = {
+        'FEED_URI': 'products.csv',
+        'FEED_FORMAT': 'csv',
+    }
 
     def __init__(self):
         super(BasicSpider, self).__init__()
         self.driver = webdriver.Firefox()
+        self.driver.maximize_window()
 
     def parse(self, response):
         self.driver.get(response.url)
