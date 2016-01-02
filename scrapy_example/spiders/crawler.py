@@ -1,6 +1,4 @@
 # -*- coding: utf-8 -*-
-
-
 from loginform import fill_login_form
 from scrapy import Request, FormRequest
 from scrapy.linkextractors import LinkExtractor

@@ -1,5 +1,4 @@
 # -*- coding: utf-8 -*-
-
 import scrapy
 from scrapy.loader import ItemLoader
 from scrapy.selector import Selector
